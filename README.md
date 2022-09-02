@@ -4,9 +4,9 @@ The final work on cource ML in business
 Проект реализует предсказание вероятность возникновения инсульта на основе датасета https://www.kaggle.com/datasets/zzettrkalpakbal/full-filled-brain-stroke-dataset
 Обучение модели представлено в stroke_predict.ipynb
 После успешного обучения мы экспортитуем модель и далее загружаем ее в простенький веб интерфейс на flask и упаковыем все это в docker.
-
+_____________________________________________________________________________________________
 Описание DataSet:
-##Attribute Information
+Attribute Information
 1) gender: "Male", "Female" or "Other"
 2) age: age of the patient
 3) hypertension: 0 if the patient doesn't have hypertension, 1 if the patient has hypertension
@@ -18,6 +18,8 @@ The final work on cource ML in business
 11) stroke: 1 if the patient had a stroke or 0 if not
 *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
 Использованная модель RandomForestClassifier
+
+______________________________________________________________________________________________
 
 1. На основе блокнота нужно обучить модель и сохранить ее
 2. Создаем docker образ, запускаем его указывая путь где лежит наша обученная модель
