@@ -1,11 +1,9 @@
 FROM python:3.7
-LABEL maintainer="impol@yandex.ru"
-COPY . /app
+MAINTAINER Denis Impolitov "impol@yandex.ru"
+RUN mkdir /app
 WORKDIR /app
-RUN pip install -r requirements.txt
-EXPOSE 8180
-EXPOSE 8181
+COPY . .
 VOLUME /app/app/models
-COPY ./docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD ["python", "./app/app.py"]
